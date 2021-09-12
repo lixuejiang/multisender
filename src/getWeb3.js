@@ -5,6 +5,15 @@ let getWeb3 = () => {
     window.addEventListener('load', function () {
       var results
       var web3 = window.web3
+      if (window.ethereum) {
+        window.web3 = new Web3(window.ethereum);
+        try {
+          window.ethereum.enable();
+          var accounts =  web3.eth.getAccounts();
+        } catch (error) {
+          // User denied account access...
+        }
+      }
 
       // Checking if Web3 has been injected by the browser (Mist/MetaMask)
       if (typeof web3 !== 'undefined') {
@@ -54,7 +63,7 @@ let getWeb3 = () => {
               netIdName = 'Unknown'
               console.log('This is an unknown network.', netId)
           }
-          document.title = `${netIdName} - MultiSender dApp`
+          document.title = `${netIdName} - MultiSender dApp`  
           var defaultAccount = web3.eth.defaultAccount || null;
           if(defaultAccount === null){
             reject({message: 'Please unlock your metamask and refresh the page'})

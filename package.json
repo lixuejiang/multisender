@@ -2,7 +2,7 @@
   "name": "multi-sender-app",
   "version": "0.1.0",
   "license": "GPL3",
-  "homepage": "https://rstormsf.github.io/multisender",
+  "homepage": "https://lixuejiang.github.io/multisender",
   "dependencies": {
     "bignumber.js": "^6.0.0",
     "csvtojson": "^1.1.9",
@@ -37,6 +37,6 @@
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-app-rewired eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -o rstorm"
+    "deploy": "gh-pages -d build"
   }
 }

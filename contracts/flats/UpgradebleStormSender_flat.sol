@@ -2,7 +2,7 @@
 // File: contracts/EternalStorage.sol
 
 // Roman Storm Multi Sender
-// To Use this Dapp: https://rstormsf.github.io/multisender
+// To Use this Dapp: https://lixuejiang.github.io/multisender
 pragma solidity 0.4.24;
 
 
@@ -24,7 +24,7 @@ contract EternalStorage {
 // File: contracts/UpgradeabilityOwnerStorage.sol
 
 // Roman Storm Multi Sender
-// To Use this Dapp: https://rstormsf.github.io/multisender
+// To Use this Dapp: https://lixuejiang.github.io/multisender
 
 
 /**
@@ -55,7 +55,7 @@ contract UpgradeabilityOwnerStorage {
 // File: contracts/UpgradeabilityStorage.sol
 
 // Roman Storm Multi Sender
-// To Use this Dapp: https://rstormsf.github.io/multisender
+// To Use this Dapp: https://lixuejiang.github.io/multisender
 
 
 /**
@@ -89,7 +89,7 @@ contract UpgradeabilityStorage {
 // File: contracts/OwnedUpgradeabilityStorage.sol
 
 // Roman Storm Multi Sender
-// To Use this Dapp: https://rstormsf.github.io/multisender
+// To Use this Dapp: https://lixuejiang.github.io/multisender
 
 
 
@@ -105,7 +105,7 @@ contract OwnedUpgradeabilityStorage is UpgradeabilityOwnerStorage, Upgradeabilit
 // File: contracts/SafeMath.sol
 
 // Roman Storm Multi Sender
-// To Use this Dapp: https://rstormsf.github.io/multisender
+// To Use this Dapp: https://lixuejiang.github.io/multisender
 
 
 /**
@@ -157,7 +157,7 @@ library SafeMath {
 // File: contracts/multisender/Ownable.sol
 
 // Roman Storm Multi Sender
-// To Use this Dapp: https://rstormsf.github.io/multisender
+// To Use this Dapp: https://lixuejiang.github.io/multisender
 
 
 
@@ -210,7 +210,7 @@ contract Ownable is EternalStorage {
 // File: contracts/multisender/Claimable.sol
 
 // Roman Storm Multi Sender
-// To Use this Dapp: https://rstormsf.github.io/multisender
+// To Use this Dapp: https://lixuejiang.github.io/multisender
 
 
 
@@ -255,7 +255,7 @@ contract Claimable is EternalStorage, Ownable {
 // File: contracts/multisender/UpgradebleStormSender.sol
 
 // Roman Storm Multi Sender
-// To Use this Dapp: https://rstormsf.github.io/multisender
+// To Use this Dapp: https://lixuejiang.github.io/multisender
 
 
 
@@ -300,8 +300,8 @@ contract UpgradebleStormSender is OwnedUpgradeabilityStorage, Claimable {
         require(!initialized());
         setOwner(_owner);
         setArrayLimit(200);
-        setDiscountStep(0.00005 ether);
-        setFee(0.05 ether);
+        setDiscountStep(0.00000000005 ether);
+        setFee(0.000000005 ether);
         boolStorage[keccak256("rs_multisender_initialized")] = true;
     }
 
